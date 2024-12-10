@@ -9,7 +9,7 @@ development by "samer tawil"  eng.samertawil@gmail.com
 ## Installation
 You can install the package via composer:
 
-<pre><span>composer require laravel-livewire/auth-ui:dev-main</span></pre>
+<pre><span>composer require laravel-livewire/auth-ui</span></pre>
 
  
 Register package by add provider services in bootstrap folder 
