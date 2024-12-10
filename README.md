@@ -26,7 +26,7 @@ publish :
 
 <pre><span>php artisan vendor:publish --provider="uilogin\pkg\UiloginServiceProvider" </span></pre>
 
-<h5 style="color:red;">Attention, overwrite User model if you not customize it  </h5>
+<h5 style="color:red !important;">Attention, overwrite User model if you not customize it  </h5>
 <pre><span>php artisan vendor:publish --provider="uilogin\pkg\UiloginServiceProvider"  --force  --tag=userModel</span></pre>
 
 or add these lines
