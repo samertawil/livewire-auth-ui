@@ -1,5 +1,5 @@
 {
-    "name": "livewire/auth-ui",
+    "name": "laravel-livewire/auth-ui",
     "description": "laravel Auth presets",
     "type": "library",
     "require": {
