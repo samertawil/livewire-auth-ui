@@ -19,17 +19,44 @@ php artisan db:seed RecoveryQuestionsSeeder"
 ## Installation
 You can install the package via composer:
 
-<pre><span>composer require ui_wired_login/pkg </span></pre>
+<pre><span>livewire/auth-ui</span></pre>
 
-## Usage
-add providerservices to providers class in bootstrap folder
+ 
+Register package by add provider services in bootstrap folder 
 <pre><span> uilogin\pkg\UiloginServiceProvider::class, </span></pre>
 
 <pre><span>
-<?php
-
+ 
 return [
-    App\Providers\AppServiceProvider::class,
+    ...
     uilogin\pkg\UiloginServiceProvider::class,
 ];
 </span></pre>
+
+publish :
+
+<pre><span>php artisan vendor:publish --provider="uilogin\pkg\UiloginServiceProvider" </span></pre>
+
+After publishing the migration you can create the  tables by running the migrations:
+
+<pre><span>php artisan migrate</span></pre>
+
+
+Seed db to insert questions to recovery_questions table
+
+<pre><span>php artisan db:seed RecoveryQuestionsSeeder</span></pre>
+
+
+Including uiauth route file to web.php
+
+<pre><span>include __DIR__.'/uiauth.php';</span></pre>
+
+Register middleware to localize the browser language
+
+ <pre><span>->withMiddleware(function (Middleware $middleware) {
+        $middleware->append(UiloginBrowserLocale::class);
+   }) </span></pre>
+
+
+   ## License
+   This package is distributed under the MIT License. Please see the LICENSE file for more information.
