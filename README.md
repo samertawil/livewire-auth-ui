@@ -9,7 +9,7 @@ development by "samer tawil"  eng.samertawil@gmail.com
 ## Installation
 You can install the package via composer:
 
-<pre><span>laravel-livewire/auth-ui</span></pre>
+<pre><span>composer require laravel-livewire/auth-ui:dev-main</span></pre>
 
  
 Register package by add provider services in bootstrap folder 
@@ -25,6 +25,22 @@ Register package by add provider services in bootstrap folder
 publish :
 
 <pre><span>php artisan vendor:publish --provider="uilogin\pkg\UiloginServiceProvider" </span></pre>
+
+<h5 style="color:red;">Attention, overwrite User model if you not customize it  </h5>
+<pre><span>php artisan vendor:publish --provider="uilogin\pkg\UiloginServiceProvider"  --force  --tag=userModel</span></pre>
+
+or add these lines
+
+ <pre><span> return [
+    ...
+       protected $fillable = 
+    [ 'name', 'email', 'password', 'user_name', 'mobile', 'user_type', 'user_activation', 'status_id', 'need_to_change',];
+
+       public static function user($user_name) {
+       return  $user = User::where('user_name', $user_name)->first();
+    }
+];
+</span></pre>
 
 After publishing the migration you can create the  tables by running the migrations:
 

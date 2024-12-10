@@ -50,6 +50,9 @@ class UiloginServiceProvider extends ServiceProvider
             __DIR__.'/Http/Models' => app_path('Models'),
         ]);
     
+        $this->publishes([  __DIR__.'/Http/Models/User.php' => app_path('Models/User.php'),],
+          'userModel'
+        );
     
    
         $this->publishes([
