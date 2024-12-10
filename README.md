@@ -1,7 +1,7 @@
 
 ## About  library
 
-livewire/auth-ui library base on PHP Laravel framework, contains Auth presets (Login, Register, Forget passwork, Ask for help)
+laravel-livewire/auth-ui library base on PHP Laravel framework, contains Auth presets (Login, Register, Forget passwork, Ask for help)
 development by "samer tawil"  eng.samertawil@gmail.com 
 
 
@@ -9,7 +9,7 @@ development by "samer tawil"  eng.samertawil@gmail.com
 ## Installation
 You can install the package via composer:
 
-<pre><span>livewire/auth-ui</span></pre>
+<pre><span>laravel-livewire/auth-ui</span></pre>
 
  
 Register package by add provider services in bootstrap folder 
