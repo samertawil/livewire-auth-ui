@@ -60,10 +60,7 @@ class UiloginServiceProvider extends ServiceProvider
         ]);
 
 
-        $this->publishes([
-            __DIR__.'/../routes/support.php' => base_path('routes/support.php'),
-        ]);
-
+  
         
         $this->publishes(
             [__DIR__ . '/../config/techsupport_en.php' => config_path('techsupport_en.php'),],
@@ -79,6 +76,12 @@ class UiloginServiceProvider extends ServiceProvider
             [__DIR__ . '/../config/captcha.php' => config_path('captcha.php'),],
             'config'
         );
+
+        $this->publishes(
+            [__DIR__ . '/../config/uilogin.php' => config_path('uilogin.php'),],
+            'config'
+        );
+
 
 
         $this->publishes([

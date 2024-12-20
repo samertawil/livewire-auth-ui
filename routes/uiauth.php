@@ -21,6 +21,9 @@ Route::middleware(['web'])->group(function () {
 
 
 Route::prefix('support/')->middleware(['web'])->name('support.')->group(function() {
-    Route::get('create',TechSupportCreate::Class)->name('create');
+    Route::get('create',TechSupportCreate::class)->name('create');
 });
 
+Route::get('uiloginHome',function() {
+    return view('livewire.ui_auth.uilogin-home')->name('uilogin.home');
+});

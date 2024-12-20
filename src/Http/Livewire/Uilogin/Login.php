@@ -49,7 +49,8 @@ class Login extends Component
             return;
         }
 
-        return redirect()->intended(route('home'));
+        return redirect()->intended(route(config('uilogin.redirectTo')));
+ 
     }
 
      #[Layout('components.layouts.uilogin-app')]
