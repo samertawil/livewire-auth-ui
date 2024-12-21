@@ -4,6 +4,7 @@ use App\Livewire\Uilogin\Login;
 use App\Livewire\Uilogin\Register;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Uilogin\ForgetPassword;
+use App\Livewire\Uilogin\LogoutController;
 use App\Livewire\TechnicalSupport\TechSupportCreate;
  
  
