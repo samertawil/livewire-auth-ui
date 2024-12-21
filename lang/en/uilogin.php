@@ -51,6 +51,7 @@ return [
     'wrongAnswer'=>'Wrong Answers',
     'FailToResetPassword'=>'Fail To ResetPassword',
     'noQuestions'=>'No Questions',
+	 'guest'=>'Guest',
     
    
 ];

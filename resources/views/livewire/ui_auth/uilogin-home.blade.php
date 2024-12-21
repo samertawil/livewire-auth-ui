@@ -9,7 +9,7 @@
 <body>
     
 
-welcome {{Auth::user()->id}}
+welcome {{Auth::user()->id ??  __('uilogin.guest') }}
 
 
 </body>

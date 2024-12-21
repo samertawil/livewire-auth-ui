@@ -50,6 +50,7 @@ return [
     'wrongAnswer'=>'خطأ بأجوبة الأسئلة',
     'FailToResetPassword'=>'خطأ في عملية اعادة تعيين كلمة المرور',
     'noQuestions'=>'لا توجد اسئلة استرجاع',
+	'guest'=>'ضيف',
     
 
 ];

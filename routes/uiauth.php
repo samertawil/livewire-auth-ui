@@ -15,6 +15,13 @@ Route::middleware(['web'])->group(function () {
 
   
     Route::get('forget-password', ForgetPassword::class)->name('uilogin.forgetpassword');
+	
+	 Route::post('logout', LogoutController::class)
+        ->name('logout');
+    
+    Route::get('uilogin-home',function() {
+        return view('uilogin::livewire.ui_auth.uilogin-home');
+    })->name('uilogin.home');
 });
  
        
@@ -24,6 +31,3 @@ Route::prefix('support/')->middleware(['web'])->name('support.')->group(function
     Route::get('create',TechSupportCreate::class)->name('create');
 });
 
-Route::get('uiloginHome',function() {
-    return view('livewire.ui_auth.uilogin-home')->name('uilogin.home');
-});
