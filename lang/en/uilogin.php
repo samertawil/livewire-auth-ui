@@ -52,6 +52,8 @@ return [
     'FailToResetPassword'=>'Fail To ResetPassword',
     'noQuestions'=>'No Questions',
 	 'guest'=>'Guest',
+     'Logout'=>'Logout',
+     'Welcome'=>' Welcome ',
     
    
 ];

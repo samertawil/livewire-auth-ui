@@ -21,7 +21,7 @@ Route::middleware(['web'])->group(function () {
         ->name('logout');
     
     Route::get('uilogin-home',function() {
-        return view('uilogin::livewire.ui_auth.uilogin-home');
+        return view('livewire.ui_auth.uilogin-home');
     })->name('uilogin.home');
 });
  
