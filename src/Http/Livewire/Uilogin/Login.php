@@ -56,6 +56,10 @@ class Login extends Component
      #[Layout('components.layouts.uilogin-app')]
     public function render()
     {
+        if (Auth::user()) {
+            
+            return view(config('uilogin.redirectToView'));
+        }
     
         return view('livewire.ui_auth.login');
     }

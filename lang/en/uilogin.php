@@ -53,7 +53,7 @@ return [
     'noQuestions'=>'No Questions',
 	 'guest'=>'Guest',
      'Logout'=>'Logout',
-     'Welcome'=>' Welcome ',
+     'welcome'=>' Welcome ',
     
    
 ];
