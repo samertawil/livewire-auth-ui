@@ -63,5 +63,14 @@ Register middleware to localize the browser language
    }) </span></pre>
 
 
+
+- add your custome page name to redirect when logout  in [config/uilogin.php - 'redirectRoute' key]
+
+* Url to start: 
+
+ </span></pre> http://***servername***/login </span></pre>
+
+
+
    ## License
    This package is distributed under the MIT License. Please see the LICENSE file for more information.
