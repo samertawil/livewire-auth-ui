@@ -16,7 +16,7 @@
 
 
                         <div class="text-center pt-2">
-                            <strong>{{__('uilogin.login_system')}}</strong>
+                            <strong>{{__('login_system')}}</strong>
                         </div>
 
                     </div>
@@ -32,12 +32,12 @@
                     <div class="card ">
 
                         <div class="card-header d-flex justify-content-between">
-                            <span> {{ __('uilogin.login_system') }} </span>
+                            <span> {{ __('login_system') }} </span>
                             <a class="text-decoration-none" href="#">{{ __('uilogin.about_system') }}</a>
                         </div>
 
 
-                        @include('layouts._alert-session')
+                        @include('uilogin::layouts._alert-session')
                         <div class="card-body">
 
                             <form wire:submit="authenticate">
@@ -55,7 +55,7 @@
                                     label="yes"></x-uilogin-checkbox>
 
 
-                                <x-uilogin-button :name="__('uilogin.Login')" divlclass="d-grid gap-2"
+                                <x-uilogin-button :name="__('login')" divlclass="d-grid gap-2"
                                     class="bg-primary text-white"></x-uilogin-button>
 
 
@@ -69,13 +69,17 @@
                                         class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }}</a>
                                 </div>
 
-                                <a href="{{ route('register') }}" wire:navigate
+                                <a href="{{ route('uilogin.register') }}" wire:navigate
                                     class="text-decoration-none">{{ __('uilogin.register_new_account') }}</a>
 
                             </div>
-                            <div class="my-4">
+                            <div class="my-4 d-md-flex justify-content-between">
 
-                                <a href="{{route('support.create')}}" class="text-decoration-none">{{ __('uilogin.get-help') }}</a>
+                                <a href="{{route('support.create')}}" class="text-decoration-none" wire:navigate>{{ __('uilogin.get-help') }}</a>
+
+                                <a href="{{route('password.change')}}" class="text-decoration-none" wire:navigate>{{ __('uilogin.Change_Password') }}</a>
+
+
                             </div>
                         </div>
                     </div>
