@@ -54,6 +54,8 @@ return [
 	 'guest'=>'Guest',
      'Logout'=>'Logout',
      'welcome'=>' Welcome ',
+     'same old password'=>'You can not choose new password as the old one !',
+     'success updated'=>'Success updated',
     
    
 ];

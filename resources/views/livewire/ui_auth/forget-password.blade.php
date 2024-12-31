@@ -104,7 +104,7 @@
 
 
 
-                            <x-uilogin-cancel-back :route="route('uilogin.login')" wire:navigate
+                            <x-uilogin-cancel-back :route="route('login')" wire:navigate
                                 label="cancel_back"></x-uilogin-cancel-back>
                         </form>
                     </div>

@@ -86,8 +86,7 @@ if (app()->getLocale() == 'ar') {
 
     @auth
 
-
-        <a class="dropdown-item " href="{{ route('logout') }}"
+       <a class="dropdown-item " href="{{ route('logout') }}"
             onclick="event.preventDefault();document.getElementById('logout-form').submit()">
             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
            <span class="text-primary text-bolder text-decoration-underline"> {{ __('uilogin.Logout') }}</span>
@@ -96,8 +95,14 @@ if (app()->getLocale() == 'ar') {
             @csrf
         </form>
 
-
     @endauth
+
+    <br>
+ 
+    @guest()
+        <a href="{{route('login')}}">{{__('uilogin.login')}}</a>
+    @endguest
+    
 
 </div>
 

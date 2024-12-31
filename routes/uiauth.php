@@ -3,6 +3,7 @@
 use App\Livewire\Uilogin\Login;
 use App\Livewire\Uilogin\Register;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Uilogin\ChangePassword;
 use App\Livewire\Uilogin\ForgetPassword;
 use App\Livewire\Uilogin\LogoutController;
 use App\Livewire\TechnicalSupport\TechSupportCreate;
@@ -10,11 +11,13 @@ use App\Livewire\TechnicalSupport\TechSupportCreate;
  
 Route::middleware(['web'])->group(function () {
 
-    Route::get('login', Login::class)->name('uilogin.login');
+    Route::get('login', Login::class)->name('login');
        
-    Route::get('register', Register::class)->name('uilogin.register');
+    Route::get('register', Register::class)->name('register');
 
   
+    Route::get('password/change/{userId?}', ChangePassword::class) ->name('password.change');
+    
     Route::get('forget-password', ForgetPassword::class)->name('uilogin.forgetpassword');
 	
 	 Route::post('logout', LogoutController::class)
