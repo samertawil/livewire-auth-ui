@@ -69,8 +69,8 @@ class ChangePassword extends Component
    #[Layout('components.layouts.uilogin-app')]
     public function render()
     {
-        $pageTitle=__('mytrans.renewPassword');
-        $title=__('mytrans.renewPassword');
+        $pageTitle=__('uilogin.renewPassword');
+        $title=__('uilogin.renewPassword');
         return view('livewire.ui_auth.change-password')->layoutData(['pageTitle'=>$pageTitle,'title'=>$title]);
     }
 }
