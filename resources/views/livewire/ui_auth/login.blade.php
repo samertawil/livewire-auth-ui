@@ -37,7 +37,7 @@
                         </div>
 
 
-                        @include('uilogin::layouts._alert-session')
+                        @include('layouts._alert-session')
                         <div class="card-body">
 
                             <form wire:submit="authenticate">
@@ -69,7 +69,7 @@
                                         class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }}</a>
                                 </div>
 
-                                <a href="{{ route('uilogin.register') }}" wire:navigate
+                                <a href="{{ route('register') }}" wire:navigate
                                     class="text-decoration-none">{{ __('uilogin.register_new_account') }}</a>
 
                             </div>

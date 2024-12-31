@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Uilogin;
 
+ 
 use App\Models\User;
 use Livewire\Component;
 use Livewire\Attributes\Rule;
@@ -13,8 +14,9 @@ use Illuminate\Support\Facades\Hash;
 
 class ChangePassword extends Component
 {
-    #[Validate(['required'])]
-    public $userId;
+    #[Validate(['required','exists:users,user_name'])]
+    public $user_name;
+ 
 
     #[Validate(['required'])]
     public $currentPassword;
@@ -27,13 +29,13 @@ class ChangePassword extends Component
     public $passwordConfirmation;
 
     public function resetPassword() {
-
-             
-        $user = User::where('user_name', $this->userId)->first();
-        
+      
         $this->validate();
       
-        if (Auth::attempt(['user_name' => $this->userId, 'password' => $this->password])) {
+        $user = User::where('user_name', $this->user_name)->first();
+        
+      
+        if (Auth::attempt(['user_name' => $this->user_name, 'password' => $this->password])) {
             
             $this->addError('password', __('uilogin.same old password'));
        
@@ -42,7 +44,7 @@ class ChangePassword extends Component
         } 
 
             
-        if (!Auth::attempt(['user_name' => $this->userId, 'password' => $this->currentPassword])) {
+        if (!Auth::attempt(['user_name' => $this->user_name, 'password' => $this->currentPassword])) {
             
             $this->addError('currentPassword', trans('auth.password'));
        
@@ -56,9 +58,8 @@ class ChangePassword extends Component
             'need_to_change'=>0,
         ]);
 
-        toastr()->success(__('uilogin.success updated'));
-       
-        return redirect()->intended(route('home'));
+        session()->flash('message',__('uilogin.success updated'));
+             return redirect()->intended(route('uilogin.home'));
 
        
 

@@ -13,9 +13,9 @@
 
                             <form wire:submit='resetPassword'>
                            
-                                <x-uilogin-input   name="user_name" label="yes" dir="ltr"
-                                 :value="$this->userId??Auth::user()->user_name" 
-                                 disabled
+                                <x-uilogin-input wire:model='user_name'  name="user_name" label="yes" dir="ltr"
+                                 {{-- :value="$this->userId??Auth::user()->user_name"  --}}
+                                 
                                     divlclass='col-lg-12'></x-uilogin-input>
 
 
@@ -31,7 +31,7 @@
                                     autocomplete="new-password" divlclass='col-lg-12'></x-uilogin-input>
 
 
-                                <x-uilogin-button :name="__('mytrans.renewPassword')" class="bg-primary text-white"
+                                <x-uilogin-button :name="__('uilogin.renewPassword')" class="bg-primary text-white"
                                     divlclass="d-grid gap-2"></x-uilogin-button>
 
 
