@@ -108,7 +108,7 @@ class ForgetPassword extends Component
                 'password' => Hash::make($this->password),
             ]);
 
-            return redirect()->intended(route('home'));
+            return redirect()->intended(route('uilogin.home'));
 
         } else {
             $this->addError('FailToResetPassword', "");

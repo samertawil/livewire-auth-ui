@@ -5,7 +5,6 @@ laravel-livewire/auth-ui library base on PHP Laravel framework, contains Auth pr
 development by "samer tawil"  eng.samertawil@gmail.com 
 
 
- 
 ## Installation
 You can install the package via composer:
 
@@ -70,6 +69,12 @@ Register middleware to localize the browser language
 
  </span></pre> http://***servername***/login </span></pre>
 
+
+* note : if you have localize prefix ypu should use this code in web.php
+
+  </span></pre>Livewire::setUpdateRoute(function ($handle) {
+        return Route::post('/livewire/update', $handle);
+    });</span></pre>
 
 
    ## License
