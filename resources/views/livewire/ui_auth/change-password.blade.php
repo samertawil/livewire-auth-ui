@@ -13,29 +13,29 @@
 
                             <form wire:submit='resetPassword'>
                            
-                                <x-uilogin-input wire:model='user_name'  name="user_name" label="yes" dir="ltr"
+                                <x-input wire:model='user_name'  name="user_name" label="yes" dir="ltr"
                                  {{-- :value="$this->userId??Auth::user()->user_name"  --}}
                                  
                                     divlclass='col-lg-12'></x-uilogin-input>
 
 
-                                <x-uilogin-input wire:model='currentPassword' type="password" name="currentPassword"
+                                <x-input wire:model='currentPassword' type="password" name="currentPassword"
                                     label="yes" dir="ltr" autocomplete="new-password"
                                     divlclass='col-lg-12'></x-uilogin-input>
 
-                                <x-uilogin-input wire:model='password' type="password" name="password" label="yes"
+                                <x-input wire:model='password' type="password" name="password" label="yes"
                                     dir="ltr" autocomplete="new-password" divlclass='col-lg-12'></x-uilogin-input>
 
-                                <x-uilogin-input wire:model="passwordConfirmation" name="passwordConfirmation" dir="ltr"
+                                <x-input wire:model="passwordConfirmation" name="passwordConfirmation" dir="ltr"
                                     id="password_confirmation" type="password" label="yes"
                                     autocomplete="new-password" divlclass='col-lg-12'></x-uilogin-input>
 
 
-                                <x-uilogin-button :name="__('uilogin.renewPassword')" class="bg-primary text-white"
+                                <x-button :name="__('customTrans.renewPassword')" class="bg-primary text-white"
                                     divlclass="d-grid gap-2"></x-uilogin-button>
 
 
-                                <x-uilogin-cancel-back :route="route('login')" wire:navigate></x-uilogin-cancel-back>
+                                <x-cancel-back :route="route('login')" wire:navigate></x-uilogin-cancel-back>
 
 
                             </form>

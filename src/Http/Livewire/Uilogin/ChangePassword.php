@@ -37,7 +37,7 @@ class ChangePassword extends Component
       
         if (Auth::attempt(['user_name' => $this->user_name, 'password' => $this->password])) {
             
-            $this->addError('password', __('uilogin.same old password'));
+            $this->addError('password', __('customTrans.same old password'));
        
             return;
 
@@ -58,7 +58,7 @@ class ChangePassword extends Component
             'need_to_change'=>0,
         ]);
 
-        session()->flash('message',__('uilogin.success updated'));
+        session()->flash('message',__('customTrans.success updated'));
              return redirect()->intended(route('uilogin.home'));
 
        
@@ -70,8 +70,8 @@ class ChangePassword extends Component
    #[Layout('components.layouts.uilogin-app')]
     public function render()
     {
-        $pageTitle=__('uilogin.renewPassword');
-        $title=__('uilogin.renewPassword');
+        $pageTitle=__('customTrans.renewPassword');
+        $title=__('customTrans.renewPassword');
         return view('livewire.ui_auth.change-password')->layoutData(['pageTitle'=>$pageTitle,'title'=>$title]);
     }
 }

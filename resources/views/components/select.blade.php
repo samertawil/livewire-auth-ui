@@ -30,7 +30,7 @@
 
 
     @if ($label)
-        <label for="{{ $id }}" @class(["col-form-label   $labelclass "])>{{ $labelname ? $labelname : __("uilogin.$name") }}
+        <label for="{{ $id }}" @class(["col-form-label   $labelclass "])>{{ $labelname ? $labelname : __("customTrans.$name") }}
             @if ($req)
                 <span class="text-danger">*</span>
             @endif
@@ -42,7 +42,7 @@
         <select   id="{{ $id }}" name="{{ $name }}" dir={{ $dir }} 
             title="{{ $title }}"
             {{ $attributes->class(['form-control ', 'is-invalid' => $errors->has($name)]) }}>
-            <option value="" >{{ __("uilogin.$ChoseTitle") }} </option>
+            <option value="" >{{ __("customTrans.$ChoseTitle") }} </option>
 
             @foreach ($options as $key => $value)
                 <option value="{{ $key }}" @selected(old($name) ? old($name) == $key : '') id="{{$name}}{{ $key }}">
@@ -50,7 +50,7 @@
             @endforeach
         </select>
         <small class="text-muted">{{$description_field}}</small>
-        @include('layouts._show-error', ['field_name' => $name])
+        @include('partials.general._show-error',['field_name'=>$name])
     </div>
   
 </div>

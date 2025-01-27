@@ -24,7 +24,7 @@
   @class(["form-group mb-$marginBottom col-md-4 col-lg-$divWidth",$divclass])  >
 
   @if ($label)
-  <label for="{{ $id }}" @class(["col-form-label  $labelclass   "])>{{$labelname?$labelname: __("uilogin.$name") }}
+  <label for="{{ $id }}" @class(["col-form-label  $labelclass   "])>{{$labelname?$labelname: __("customTrans.$name") }}
       @if($req)
       <span class="text-danger">*</span>
       @if ($span)
@@ -44,6 +44,6 @@
          {{ $attributes->class(['form-control', 'is-invalid' => $errors->has($name)]) }}>{{ old($name) }}</textarea>
              
 
-     @include('layouts._show-error', ['field_name' => $name])
+         @include('partials.general._show-error',['field_name'=>$name])
 
  </div>

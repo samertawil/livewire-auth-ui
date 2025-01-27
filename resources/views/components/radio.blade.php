@@ -22,7 +22,7 @@
 <div @class(["form-group mb-3 col-md-4 col-lg-$divWidth",$divclass])>
 
     @if ($label)
-          <label @class(["col-form-label  $labelclass "])>{{$labelname??  __("uilogin.$name") }}</label>
+          <label @class(["col-form-label  $labelclass "])>{{$labelname??  __("customTrans.$name") }}</label>
     @endif
 
 
@@ -34,17 +34,15 @@
                 {{ $attributes->class(['form-check-input', 'is-invalid' => $errors->has($name)]) }}>
 
 
-            <label for={{ $value1 }} class="form-label fw-normal mr-4">{{ $value_title1 }}</label>
-            @include('layouts._show-error', [
-                'field_name' => $name,
-            ])
+            <label for={{ $value1 }} class="form-label fw-normal mr-4">{{  __("customTrans.$value_title1")  }}</label>
+            @include('partials.general._show-error',['field_name'=>$name])
         </div>
         <div class="mx-4">
             
             <input type="radio" id="id2" name="{{ $name }}" value="{{ $value2 }}"
                 @checked($name ? old($name) == $value2 : '')
                 {{ $attributes->class(['form-check-input', 'is-invalid' => $errors->has($name)]) }}>
-            <label for="id2" class="form-label fw-normal mr-4 ">{{ $value_title2 }}</label>
+            <label for="id2" class="form-label fw-normal mr-4 ">{{  __("customTrans.$value_title2") }}</label>
         </div>
     </div>
 </div>

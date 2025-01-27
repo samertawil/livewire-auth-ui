@@ -82,14 +82,14 @@ if (app()->getLocale() == 'ar') {
 <div class="container mt-5">
 
 
-    {{__('uilogin.welcome')}}  {{ Auth::user()->name ??  __('uilogin.guest') }}
+    {{__('customTrans.welcome')}}  {{ Auth::user()->name ??  __('customTrans.guest') }}
 
     @auth
 
        <a class="dropdown-item " href="{{ route('logout') }}"
             onclick="event.preventDefault();document.getElementById('logout-form').submit()">
             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-           <span class="text-primary text-bolder text-decoration-underline"> {{ __('uilogin.Logout') }}</span>
+           <span class="text-primary text-bolder text-decoration-underline"> {{ __('customTrans.Logout') }}</span>
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
@@ -100,7 +100,7 @@ if (app()->getLocale() == 'ar') {
     <br>
  
     @guest()
-        <a href="{{route('login')}}">{{__('uilogin.login')}}</a>
+        <a href="{{route('login')}}">{{__('customTrans.login')}}</a>
     @endguest
     
 

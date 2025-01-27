@@ -33,7 +33,7 @@
 
                         <div class="card-header d-flex justify-content-between">
                             <span> {{ __('login_system') }} </span>
-                            <a class="text-decoration-none" href="#">{{ __('uilogin.about_system') }}</a>
+                            <a class="text-decoration-none" href="#">{{ __('customTrans.about_system') }}</a>
                         </div>
 
 
@@ -43,19 +43,19 @@
                             <form wire:submit="authenticate">
 
 
-                                <x-uilogin-input wire:model="user_name" name="user_name" label="yes"
+                                <x-input wire:model="user_name" name="user_name" label="yes"
                                     divlclass="col-lg-12" dir="ltr" required autofocus> </x-uilogin-input>
 
 
-                                <x-uilogin-input wire:model="password" type="password" name="password" label="yes"
+                                <x-input wire:model="password" type="password" name="password" label="yes"
                                     divlclass="col-lg-12" dir="ltr" required> </x-uilogin-input>
 
 
-                                <x-uilogin-checkbox wire:model='remember' name="remember"
+                                <x-checkbox wire:model='remember' name="remember"
                                     label="yes"></x-uilogin-checkbox>
 
 
-                                <x-uilogin-button :name="__('login')" divlclass="d-grid gap-2"
+                                <x-button :name="__('login')" divlclass="d-grid gap-2"
                                     class="bg-primary text-white"></x-uilogin-button>
 
 
@@ -66,18 +66,18 @@
                             <div class="d-md-flex justify-content-between">
                                 <div class="mb-4" id="change_id">
                                     <a href="{{route('uilogin.forgetpassword')}}" id="btn1"
-                                        class="text-decoration-none ">{{ __('uilogin.Forgot Your Password') }}</a>
+                                        class="text-decoration-none ">{{ __('customTrans.Forgot Your Password') }}</a>
                                 </div>
 
                                 <a href="{{ route('register') }}" wire:navigate
-                                    class="text-decoration-none">{{ __('uilogin.register_new_account') }}</a>
+                                    class="text-decoration-none">{{ __('customTrans.register_new_account') }}</a>
 
                             </div>
                             <div class="my-4 d-md-flex justify-content-between">
 
-                                <a href="{{route('support.create')}}" class="text-decoration-none" wire:navigate>{{ __('uilogin.get-help') }}</a>
+                                <a href="{{route('support.create')}}" class="text-decoration-none" wire:navigate>{{ __('customTrans.get-help') }}</a>
 
-                                <a href="{{route('password.change')}}" class="text-decoration-none" wire:navigate>{{ __('uilogin.Change_Password') }}</a>
+                                <a href="{{route('password.change')}}" class="text-decoration-none" wire:navigate>{{ __('customTrans.Change_Password') }}</a>
 
 
                             </div>

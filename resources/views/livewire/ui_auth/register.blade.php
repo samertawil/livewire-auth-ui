@@ -3,24 +3,24 @@
          <div class="row justify-content-center">
              <div class="col-md-5">
                  <div class="card">
-                     <div class="card-header">{{ __('uilogin.register_new_account') }}</div>
+                     <div class="card-header">{{ __('customTrans.register_new_account') }}</div>
 
                      <div class="card-body">
 
                          <form wire:submit='register'>
 
-                             <x-uilogin-input wire:model.live='user_name' name="user_name" label="yes" dir="ltr" 
+                             <x-input wire:model.live='user_name' name="user_name" label="yes" dir="ltr" 
                                  divlclass='col-lg-12' req></x-uilogin-input>
 
-                             <x-uilogin-input wire:model.live='name' name="name" label="yes"
+                             <x-input wire:model.live='name' name="name" label="yes"
                                  divlclass='col-lg-12' req></x-uilogin-input>
 
 
-                             <x-uilogin-input wire:model.live='mobile' name="mobile" label="yes"
+                             <x-input wire:model.live='mobile' name="mobile" label="yes"
                                  divlclass='col-lg-12' dir="ltr" req></x-uilogin-input>
 
 
-                             <x-uilogin-input wire:model.live='email' name="email" label="yes"
+                             <x-input wire:model.live='email' name="email" label="yes"
                                  divlclass='col-lg-12' dir="ltr" req></x-uilogin-input>
 
                              @php
@@ -31,31 +31,31 @@
                                      <tr>
                                          <td>
                                    
-                                             <x-uilogin-select wire:model="recoveryQuestions.0"   name="recoveryQuestions.0"
+                                             <x-select wire:model="recoveryQuestions.0"   name="recoveryQuestions.0"
                                              :options="$this->QuestionData->pluck(  $questions , 'id')"
                                                  label divlclass='col-lg-12' wire:change='QuestionData2'
-                                                   :description_field="__('uilogin.recoveryQuestions')" req></x-uilogin-select>
+                                                   :description_field="__('customTrans.recoveryQuestions')" req></x-uilogin-select>
 
                                          </td>
-                                         <x-uilogin-input wire:model='answers.0' name="answers.0"
+                                         <x-input wire:model='answers.0' name="answers.0"
                                              label="yes" divlclass='col-lg-12'  req></x-uilogin-input>
 
                                              
-                                             <x-uilogin-select wire:model="recoveryQuestions.1" 
+                                             <x-select wire:model="recoveryQuestions.1" 
                                              :options="$this->QuestionData2->pluck(  $questions , 'id')" name="recoveryQuestions.1"
                                                  label divlclass='col-lg-12'  wire:change='QuestionData3' req></x-uilogin-select>
 
                                          </td>
-                                         <x-uilogin-input wire:model='answers.1' name="answers.1"
+                                         <x-input wire:model='answers.1' name="answers.1"
                                              label="yes" divlclass='col-lg-12'  req></x-uilogin-input>
 
                                                  
-                                             <x-uilogin-select wire:model="recoveryQuestions.2" 
+                                             <x-select wire:model="recoveryQuestions.2" 
                                              :options="$this->QuestionData3->pluck(  $questions , 'id')" name="recoveryQuestions.2"
                                                  label divlclass='col-lg-12'  req></x-uilogin-select>
 
                                          </td>
-                                         <x-uilogin-input wire:model='answers.2' name="answers.2"
+                                         <x-input wire:model='answers.2' name="answers.2"
                                              label="yes" divlclass='col-lg-12'  req></x-uilogin-input>
 
                                      </tr>
@@ -65,19 +65,19 @@
                              </div>
                              
 
-                             <x-uilogin-input wire:model='password' type="password" name="password" label="yes"
+                             <x-input wire:model='password' type="password" name="password" label="yes"
                                  autocomplete="new-password" divlclass='col-lg-12' req></x-uilogin-input>
 
-                             <x-uilogin-input wire:model.live='passwordConfirmation' name="passwordConfirmation"
+                             <x-input wire:model.live='passwordConfirmation' name="passwordConfirmation"
                                  id="password_confirmation" type="password" label="yes" autocomplete="new-password"
                                  divlclass='col-lg-12' req></x-uilogin-input>
 
 
-                             <x-uilogin-button :name="__('uilogin.register_new_account')" class="bg-primary text-white"
+                             <x-button :name="__('customTrans.register_new_account')" class="bg-primary text-white"
                                  divlclass="d-grid gap-2"></x-uilogin-button>
 
 
-                             <x-uilogin-cancel-back :route="route('login')" wire:navigate
+                             <x-cancel-back :route="route('login')" wire:navigate
                                  label="cancel_back"></x-uilogin-cancel-back>
                          </form>
                      </div>

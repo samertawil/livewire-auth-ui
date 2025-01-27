@@ -66,7 +66,7 @@ class ForgetPassword extends Component
                 }
                 else {
                    
-                      $this->addError('noQuestions',__('uilogin.noQuestions'));
+                      $this->addError('noQuestions',__('customTrans.noQuestions'));
 
                       return;
                 }
@@ -86,7 +86,7 @@ class ForgetPassword extends Component
             $this->checkResult = 1;
         } else {
 
-            $this->addError('wrongAnswer',__('uilogin.wrongAnswer'));
+            $this->addError('wrongAnswer',__('customTrans.wrongAnswer'));
 
             return;
 

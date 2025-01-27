@@ -4,7 +4,7 @@
              <div class="col-md-5">
                  <div class="card">
 
-                     <div class="card-header">{{ __('uilogin.get-help') }}</div>
+                     <div class="card-header">{{ __('customTrans.get-help') }}</div>
 
 
 
@@ -13,10 +13,10 @@
                          <form wire:submit='create'>
 
 
-                             <x-uilogin-input  name="name" wire:model='name' label :labelname="__('uilogin.providerName')" req
+                             <x-input  name="name" wire:model='name' label :labelname="__('customTrans.providerName')" req
                                  divWidth="12"></x-uilogin-input>
 
-                             <x-uilogin-input name="user_name" wire:model='user_name' label :labelname="__('uilogin.accountName')"
+                             <x-input name="user_name" wire:model='user_name' label :labelname="__('customTrans.accountName')"
                                  divWidth="12"></x-uilogin-input>
 
 
@@ -25,13 +25,13 @@
                                  $techsipport = 'techsupport_' . app()->getLocale();
                              @endphp
 
-                             <x-uilogin-input name="mobile" wire:model='mobile' label divWidth="12"
-                                 :description_field="__('uilogin.mobileDetails')"></x-uilogin-input>
+                             <x-input name="mobile" wire:model='mobile' label divWidth="12"
+                                 :description_field="__('customTrans.mobileDetails')"></x-uilogin-input>
 
-                             <x-uilogin-select wire:model='subject_id' id='subject_id' name="subject_id"
-                                 :options="config($techsipport)['list']" label :labelname="__('uilogin.help-type')" divWidth="12" req></x-uilogin-select>
+                             <x-select wire:model='subject_id' id='subject_id' name="subject_id"
+                                 :options="config($techsipport)['list']" label :labelname="__('customTrans.help-type')" divWidth="12" req></x-uilogin-select>
 
-                             <x-uilogin-textarea wire:model='issue_description' name="issue_description" label req
+                             <x-textarea wire:model='issue_description' name="issue_description" label req
                                  rows="4" cols="30" divWidth="12"></x-uilogin-textarea>
 
                      </div>
@@ -43,7 +43,7 @@
 
                          <input type="text" wire:model='captcha' name="captcha"
                              class="form-control  my-3 @error('captcha') is-invalid @enderror"
-                             placeholder="{{ __('uilogin.captcha') }}">
+                             placeholder="{{ __('customTrans.captcha') }}">
                          @error('captcha')
                              <div class="invalid-feedback">{{ $message }}</div>
                          @enderror
@@ -55,10 +55,10 @@
                  <div class="row my-3 ">
 
 
-                     <x-uilogin-button :name="__('uilogin.send')" class="bg-primary text-white"
+                     <x-button :name="__('customTrans.send')" class="bg-primary text-white"
                          divlclass="d-grid gap-2"></x-uilogin-button>
 
-                     <x-uilogin-cancel-back :route="route('login')" wire:navigate label="cancel_back"></x-uilogin-cancel-back>
+                     <x-cancel-back :route="route('login')" wire:navigate label="cancel_back"></x-uilogin-cancel-back>
                  </div>
 
                  </form>
